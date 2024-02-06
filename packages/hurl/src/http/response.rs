@@ -56,7 +56,7 @@ impl Response {
 
     /// Returns optional Content-type header value.
     pub fn content_type(&self) -> Option<String> {
-        header::get_values(&self.headers, "Content-Type")
+        header::get_values(&self.headers, Header::CONTENT_TYPE)
             .first()
             .cloned()
     }
